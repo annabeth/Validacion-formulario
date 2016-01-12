@@ -28,38 +28,65 @@
 
         <form id="myForm" action="index.html">
            <div class="row">
-                <p class="col-md-8">
+                <div class="col-md-8">
 
-                  <input type="text" name="nombre" placeholder="Nombres"  class="col-md-5">
+                  <input class="col-md-5" type="text" name="nombre" placeholder="Nombres"  >
 
-                  <input type="text" name="apellidos" placeholder="Apellidos" class="col-md-5 col-md-offset-1">
-                </p>
-                <p class="col-md-8">
-                  <input type="text" name="telefono" placeholder="Teléfono" class="col-md-5">
+                  <input class="col-md-5 col-md-offset-1" type="text" name="apellidos" placeholder="Apellidos" >
+                </div>
+                <div class="col-md-8">
+                  <input class="col-md-5" type="text" name="telefono" placeholder="Teléfono" >
 
-                  <input type="text" name="email" placeholder="Correo electrónico" class="col-md-5 col-md-offset-1">
-                </p>
-                <p class="col-md-8">
+                  <input class="col-md-5 col-md-offset-1" type="text" name="email" placeholder="Correo electrónico" >
+                </div>
+                <div class="col-md-8">
 
-                  <input type="password" name="cuidad" placeholder="Ciudad *" class="col-md-5"><img src="img/chevron.png" alt="">
-                </p>
-                 <p class="col-md-8">
-                  <input type="text" name="placa" placeholder="Placa" class="col-md-5">
+                  <div class="col-md-5 seleccion">
 
-                  <input type="text" name="vehiculo" placeholder="Uso del Vehículo *" class="col-md-5 col-md-offset-1"><img src="img/chevron.png" alt="">
-                </p>
+                    <select type="text" name="ciudad" placeholder="" >
+                     <option >Ciudad *</option>
+                      <option>Arequipa</option>
+                      <option>Lima</option>
+                      <option>Puno</option>
+                      <option>Trujillo</option>
+                      <option>Cuzco</option>
+                    </select>
+
+                  </div>
+
+                </div>
+                <div class="col-md-8">
+                  <input class="col-md-5" type="text" name="placa" placeholder="Placa" >
+
+                  <div class="col-md-5 col-md-offset-1 seleccion">
+
+                    <select type="text" name="vehiculo" >
+                      <option value="">Uso del Vehículo *</option>
+                      <option>Particular</option>                    <option>Servicio</option>
+                    </select>
+                  </div>
+
+                </div>
             </div>
 
             <div class="row">
                 <div class="col-md-8">
                     <br>
                     <p>Al hacer click en "continuar" acepto las términos y condiciones.</p>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
 
-                        <p><button type="submit">Continuar</button></p>
-                        <img  class="img-responsive pull-right" src="img/Icono_Delivery.png" alt="">
+                        <div class="col-md-6">
+                          <button type="submit">Continuar</button>
+                        </div>
+                        <div class="col-md-6 media">
+
+                          <img  class="media-object media-left img-responsive img-circle" src="img/Icono_Delivery.png" alt="">
+                          <div class="media-body">
+                            <p>Delivery <br> Gratis</p>
+                          </div>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-md-offset-4">
+                    <div class="col-md-3 col-md-offset-3">
 
                         <img class="img-responsive" src="img/Logo_Positiva.png" alt="">
                     </div>

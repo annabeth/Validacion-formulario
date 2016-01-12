@@ -18,38 +18,35 @@ function initPage()
 				minlength:6,
 				maxlength:12
 			},
-            ciudad:
-            {
-                minlength: 3
-            },
-            placa:
-            {
-                minlenght: 6
-            },
-            vehiculo:
-            {
-                required: true,
-                minlenght: 10
-            }
+
+			placa:
+			{
+				minlenght: 6
+			},
+			vehiculo:
+			{
+				required: true,
+				minlenght: 10
+			}
 		},
 		messages:{
 			nombre:"Por favor ingresa tu nombre",
 			apellidos:"Por favor ingresa tu apellido",
-            telefono:"Ingresa tu numero de teléfono",
+			telefono:"Ingresa tu numero de teléfono",
 			email:{
 				required:"Ingresa tu correo"},
-            ciudad:
-            {
-				required:"Seleccione su cuidad de origen",
+			ciudad:
+			{
+				required:"Seleccione su ciudad de origen",
 			},
-            placa:
-            {
-                required:"Ingresa tu numero de placa",
-            },
-            vehiculo:
-            {
-                required:"Seleccione el uso del vehículo"
-            }
+			placa:
+			{
+				required:"Ingresa tu numero de placa",
+			},
+			vehiculo:
+			{
+				required:"Seleccione el uso del vehículo"
+			}
 
 		},
 		submitHandler: function()
