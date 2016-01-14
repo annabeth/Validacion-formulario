@@ -26,25 +26,25 @@
     <section>
        <div class="container">
 
-        <form id="myForm" action="index.html">
+        <form id="formRegistro" onsubmit="enviarFormulario" action="index.html">
            <div class="row">
                 <div class="col-md-8">
 
-                  <input class="col-md-5" type="text" name="nombre" placeholder="Nombres"  >
+                  <input class="col-md-5" id="nombre" type="text" name="nombre" placeholder="Nombres"  >
 
-                  <input class="col-md-5 col-md-offset-1" type="text" name="apellidos" placeholder="Apellidos" >
+                  <input class="col-md-5 col-md-offset-1" id="apellido" type="text" name="apellidos" placeholder="Apellidos" >
                 </div>
                 <div class="col-md-8">
-                  <input class="col-md-5" type="text" name="telefono" placeholder="Teléfono" >
+                  <input class="col-md-5" id="telefono" type="text" name="telefono" placeholder="Teléfono" >
 
-                  <input class="col-md-5 col-md-offset-1" type="text" name="email" placeholder="Correo electrónico" >
+                  <input class="col-md-5 col-md-offset-1" id="email" type="text" name="email" placeholder="Correo electrónico" >
                 </div>
                 <div class="col-md-8">
 
                   <div class="col-md-5 seleccion">
 
-                    <select type="text" name="ciudad" placeholder="" >
-                     <option >Ciudad *</option>
+                    <select id="ciudad" type="text" name="ciudad" placeholder="" >
+                      <option >Ciudad *</option>
                       <option>Arequipa</option>
                       <option>Lima</option>
                       <option>Puno</option>
@@ -56,16 +56,15 @@
 
                 </div>
                 <div class="col-md-8">
-                  <input class="col-md-5" type="text" name="placa" placeholder="Placa" >
+                  <input id="placa" class="col-md-5" type="text" name="placa" placeholder="Placa" >
 
                   <div class="col-md-5 col-md-offset-1 seleccion">
 
-                    <select type="text" name="vehiculo" >
+                    <select id="vehiculo" type="text" name="vehiculo" >
                       <option value="">Uso del Vehículo *</option>
                       <option>Particular</option>                    <option>Servicio</option>
                     </select>
                   </div>
-
                 </div>
             </div>
 
@@ -75,12 +74,12 @@
                     <p>Al hacer click en "continuar" acepto las términos y condiciones.</p>
                     <div class="col-md-6">
 
-                        <div class="col-md-6">
-                          <button type="submit">Continuar</button>
+                        <div class="col-md-5">
+                          <button type="submit"><strong>Continuar</strong></button>
                         </div>
-                        <div class="col-md-6 media">
+                        <div class="col-md-7 media">
 
-                          <img  class="media-object media-left img-responsive img-circle" src="img/Icono_Delivery.png" alt="">
+                          <img  class="media-object pull-left img-responsive img-circle" src="img/Icono_Delivery.png" alt="">
                           <div class="media-body">
                             <p>Delivery <br> Gratis</p>
                           </div>
@@ -94,11 +93,6 @@
                 </div>
             </div>
         </form>
-
-
-
-
-
        </div>
     </section>
 
@@ -107,6 +101,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="plugins/swal/sweetalert.min.js"></script>
+    <script src="https://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -2,6 +2,12 @@ $(document).ready(initPage);
 
 function initPage()
 {
+	$('#formRegistro').submit(enviarFormulario);
+	//Inicio de aplicacion, conectando con parse
+	Parse.initialize("0QRQlrhhO6K0xnDQfB9iAPSAg0edo33aaTCm3UCc", "RSasCizqHgKIUMgIo6RZuTwwICO5sMZbPdsq7JUN");
+
+	$("#formRegistro").validate(opciones);
+
 	var opciones = {
 		rules:{
 			nombre:{
@@ -49,16 +55,37 @@ function initPage()
 			}
 
 		},
-		submitHandler: function()
+		submitHandler: function(form)
 		{
-			swal("Es válido", "Todo ok", "success");
+			enviarFormulario();
+			return false;
 		},
-		invalidHandler: function()
+		invalidHandler: function(event, validator)
 		{
+			console.log(validator);
 			swal("Error", "Verifica el fomulario", "warning");
 		}
 	};
 
 
-	$("#myForm").validate(opciones);
+
 }
+
+function enviarFormulario(){
+
+	var Cliente = Parse.Object.extend("Cliente");
+
+	var instancia = new Cliente();
+
+	instancia.save({
+		Nombre: $('#nombre').val(),
+		Apellido:$('#apellido').val()
+	}).then(function(){
+		$('#nombre').val("");
+		$('#apellido').val("");
+		swal("Buen Trabajo", "Tu registro fue guardado", "success");
+	});
+
+
+}
+

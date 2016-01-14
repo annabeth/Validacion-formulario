@@ -9,7 +9,6 @@ body{
     font-family: Times New Roman;
     background: url(../img/Fondo_Mujer_Wide.png) no-repeat left center;
     background-size: cover;
-    height: 100%;
     color: #fff;
     margin: 50px auto;
 }
@@ -51,7 +50,7 @@ input::-webkit-input-placeholder{
 
 }
 .seleccion select{
-    background: url(../img/chevron.png)no-repeat right bottom;
+    background: url(../img/chevron.png)no-repeat right center;
      -moz-appearance: none;
      -webkit-appearance: none;
      appearance: none;
@@ -59,3 +58,11 @@ input::-webkit-input-placeholder{
 
 }
 
+button{
+    margin-top: 20px;
+    background: lightgray;
+    color: gray;
+    font-size: 20px;
+    padding: 8px 10px;
+    border: none;
+}
